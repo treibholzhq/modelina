@@ -1,3 +1,4 @@
+import * as TJS from 'typescript-json-schema';
 import { AbstractInputProcessor } from './AbstractInputProcessor';
 import { JsonSchemaInputProcessor } from './JsonSchemaInputProcessor';
 import { InputMetaModel, SwaggerV2Schema, ProcessorOptions } from '../models';
@@ -9,6 +10,9 @@ import { convertToMetaModel } from '../helpers';
 /**
  * Class for processing Swagger inputs
  */
+export interface SwaggerInputProcessorOptions extends TJS.PartialArgs {
+  alwaysIncludeDefinitions?: boolean;
+}
 export class SwaggerInputProcessor extends AbstractInputProcessor {
   static supportedVersions = ['2.0'];
 
@@ -28,58 +32,80 @@ export class SwaggerInputProcessor extends AbstractInputProcessor {
     }
 
     Logger.debug('Processing input as a Swagger document');
-    const common = new InputMetaModel();
-    common.originalInput = input;
+    const inputModel = new InputMetaModel();
+    inputModel.originalInput = input;
 
     //Since we require that all references have been dereferenced, we cannot "simply" support already parsed inputs.
     const api = (await SwaggerParser.dereference(
       input as any
     )) as unknown as OpenAPIV2.Document;
-    for (const [path, pathObject] of Object.entries(api.paths)) {
-      //Remove all special chars from path
-      let formattedPathName = path.replace(/[^\w\s*]+/g, '');
-      //Remove any pre-pending '/'
-      formattedPathName = formattedPathName.replace(/\//, '');
-      //Replace all segment separators '/'
-      formattedPathName = formattedPathName.replace(/\//gm, '_');
-      this.processOperation(
-        pathObject.get,
-        `${formattedPathName}_get`,
-        common,
-        options
-      );
-      this.processOperation(
-        pathObject.put,
-        `${formattedPathName}_put`,
-        common,
-        options
-      );
-      this.processOperation(
-        pathObject.post,
-        `${formattedPathName}_post`,
-        common,
-        options
-      );
-      this.processOperation(
-        pathObject.options,
-        `${formattedPathName}_options`,
-        common,
-        options
-      );
-      this.processOperation(
-        pathObject.head,
-        `${formattedPathName}_head`,
-        common,
-        options
-      );
-      this.processOperation(
-        pathObject.patch,
-        `${formattedPathName}_patch`,
-        common,
-        options
-      );
+
+    if (api) {
+      if (api.paths) {
+        for (const [path, pathObject] of Object.entries(api.paths)) {
+          this.processPath(pathObject, path, inputModel, options);
+        }
+      } else if (
+        api.definitions &&
+        options?.swagger?.alwaysIncludeDefinitions
+      ) {
+        for (const [schema, schemaObject] of Object.entries(api.definitions)) {
+          this.includeSchema(schemaObject, schema, inputModel, options);
+        }
+      }
     }
-    return common;
+
+    return inputModel;
+  }
+
+  private processPath(
+    pathObject: OpenAPIV2.PathItemObject,
+    path: string,
+    inputModel: InputMetaModel,
+    options?: ProcessorOptions
+  ) {
+    //Remove all special chars from path
+    let formattedPathName = path.replace(/[^\w\s*]+/g, '');
+    //Remove any pre-pending '/'
+    formattedPathName = formattedPathName.replace(/\//, '');
+    //Replace all segment separators '/'
+    formattedPathName = formattedPathName.replace(/\//gm, '_');
+    this.processOperation(
+      pathObject.get,
+      `${formattedPathName}_get`,
+      inputModel,
+      options
+    );
+    this.processOperation(
+      pathObject.put,
+      `${formattedPathName}_put`,
+      inputModel,
+      options
+    );
+    this.processOperation(
+      pathObject.post,
+      `${formattedPathName}_post`,
+      inputModel,
+      options
+    );
+    this.processOperation(
+      pathObject.options,
+      `${formattedPathName}_options`,
+      inputModel,
+      options
+    );
+    this.processOperation(
+      pathObject.head,
+      `${formattedPathName}_head`,
+      inputModel,
+      options
+    );
+    this.processOperation(
+      pathObject.patch,
+      `${formattedPathName}_patch`,
+      inputModel,
+      options
+    );
   }
 
   private processOperation(
