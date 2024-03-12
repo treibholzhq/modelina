@@ -1,3 +1,4 @@
+import * as TJS from 'typescript-json-schema';
 import { AbstractInputProcessor } from './AbstractInputProcessor';
 import { JsonSchemaInputProcessor } from './JsonSchemaInputProcessor';
 import { InputMetaModel, OpenapiV3Schema, ProcessorOptions } from '../models';
@@ -9,6 +10,9 @@ import { convertToMetaModel } from '../helpers';
 /**
  * Class for processing OpenAPI V3.0 inputs
  */
+export interface OpenAPIInputProcessorOptions extends TJS.PartialArgs {
+  alwaysIncludeComponents?: boolean;
+}
 export class OpenAPIInputProcessor extends AbstractInputProcessor {
   static supportedVersions = ['3.0.0', '3.0.1', '3.0.2', '3.0.3', '3.1.0'];
 
@@ -34,11 +38,25 @@ export class OpenAPIInputProcessor extends AbstractInputProcessor {
       | OpenAPIV3.Document
       | OpenAPIV3_1.Document;
 
-    if (api && api.paths) {
-      for (const [path, pathObject] of Object.entries(api.paths)) {
-        this.processPath(pathObject, path, inputModel, options);
+    if (api) {
+      const hasPaths = Object.keys(api.paths || {}).length > 0;
+      const hasSchemas = Object.keys(api.components?.schemas || {}).length > 0;
+      const shouldIncludeComponents =
+        options?.openapi?.alwaysIncludeComponents || false;
+
+      if (hasPaths) {
+        for (const [path, pathObject] of Object.entries(api.paths!)) {
+          this.processPath(pathObject, path, inputModel, options);
+        }
+      } else if (hasSchemas && shouldIncludeComponents) {
+        for (const [schema, schemaObject] of Object.entries(
+          api.components!.schemas!
+        )) {
+          this.includeSchema(schemaObject, schema, inputModel, options);
+        }
       }
     }
+
     return inputModel;
   }
 

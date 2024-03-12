@@ -2,7 +2,1747 @@
 
 exports[`OpenAPIInputProcessor process() should process the OpenAPI document accurately 1`] = `
 InputMetaModel {
-  "models": Object {},
+  "models": Object {
+    "test_delete_200_application_json": ObjectModel {
+      "name": "test_delete_200_application_json",
+      "options": Object {
+        "isNullable": false,
+      },
+      "originalInput": OpenapiV3Schema {
+        "properties": OpenapiV3Schema {
+          "code": OpenapiV3Schema {
+            "format": "int32",
+            "type": "integer",
+            "x-modelgen-inferred-name": "code",
+          },
+          "message": OpenapiV3Schema {
+            "type": "string",
+            "x-modelgen-inferred-name": "message",
+          },
+          "type": OpenapiV3Schema {
+            "type": "string",
+            "x-modelgen-inferred-name": "type",
+          },
+        },
+        "type": "object",
+        "x-modelgen-inferred-name": "test_delete_200_application_json",
+      },
+      "properties": Object {
+        "additionalProperties": ObjectPropertyModel {
+          "property": DictionaryModel {
+            "key": StringModel {
+              "name": "additionalProperties",
+              "options": Object {
+                "isNullable": false,
+              },
+              "originalInput": Array [
+                true,
+              ],
+            },
+            "name": "additionalProperties",
+            "options": Object {
+              "isNullable": false,
+            },
+            "originalInput": Array [
+              true,
+            ],
+            "serializationType": "unwrap",
+            "value": AnyModel {
+              "name": "undefined",
+              "options": Object {
+                "isNullable": true,
+              },
+              "originalInput": true,
+            },
+          },
+          "propertyName": "additionalProperties",
+          "required": false,
+        },
+        "code": ObjectPropertyModel {
+          "property": IntegerModel {
+            "name": "code",
+            "options": Object {
+              "format": "int32",
+              "isNullable": false,
+            },
+            "originalInput": OpenapiV3Schema {
+              "format": "int32",
+              "type": "integer",
+              "x-modelgen-inferred-name": "code",
+            },
+          },
+          "propertyName": "code",
+          "required": false,
+        },
+        "message": ObjectPropertyModel {
+          "property": StringModel {
+            "name": "message",
+            "options": Object {
+              "isNullable": false,
+            },
+            "originalInput": OpenapiV3Schema {
+              "type": "string",
+              "x-modelgen-inferred-name": "message",
+            },
+          },
+          "propertyName": "message",
+          "required": false,
+        },
+        "type": ObjectPropertyModel {
+          "property": StringModel {
+            "name": "type",
+            "options": Object {
+              "isNullable": false,
+            },
+            "originalInput": OpenapiV3Schema {
+              "type": "string",
+              "x-modelgen-inferred-name": "type",
+            },
+          },
+          "propertyName": "type",
+          "required": false,
+        },
+      },
+    },
+    "test_delete_application_json": ObjectModel {
+      "name": "test_delete_application_json",
+      "options": Object {
+        "isNullable": false,
+      },
+      "originalInput": OpenapiV3Schema {
+        "properties": OpenapiV3Schema {
+          "code": OpenapiV3Schema {
+            "format": "int32",
+            "type": "integer",
+            "x-modelgen-inferred-name": "code",
+          },
+          "message": OpenapiV3Schema {
+            "type": "string",
+            "x-modelgen-inferred-name": "message",
+          },
+          "type": OpenapiV3Schema {
+            "type": "string",
+            "x-modelgen-inferred-name": "type",
+          },
+        },
+        "type": "object",
+        "x-modelgen-inferred-name": "test_delete_application_json",
+      },
+      "properties": Object {
+        "additionalProperties": ObjectPropertyModel {
+          "property": DictionaryModel {
+            "key": StringModel {
+              "name": "additionalProperties",
+              "options": Object {
+                "isNullable": false,
+              },
+              "originalInput": Array [
+                true,
+              ],
+            },
+            "name": "additionalProperties",
+            "options": Object {
+              "isNullable": false,
+            },
+            "originalInput": Array [
+              true,
+            ],
+            "serializationType": "unwrap",
+            "value": AnyModel {
+              "name": "undefined",
+              "options": Object {
+                "isNullable": true,
+              },
+              "originalInput": true,
+            },
+          },
+          "propertyName": "additionalProperties",
+          "required": false,
+        },
+        "code": ObjectPropertyModel {
+          "property": IntegerModel {
+            "name": "code",
+            "options": Object {
+              "format": "int32",
+              "isNullable": false,
+            },
+            "originalInput": OpenapiV3Schema {
+              "format": "int32",
+              "type": "integer",
+              "x-modelgen-inferred-name": "code",
+            },
+          },
+          "propertyName": "code",
+          "required": false,
+        },
+        "message": ObjectPropertyModel {
+          "property": StringModel {
+            "name": "message",
+            "options": Object {
+              "isNullable": false,
+            },
+            "originalInput": OpenapiV3Schema {
+              "type": "string",
+              "x-modelgen-inferred-name": "message",
+            },
+          },
+          "propertyName": "message",
+          "required": false,
+        },
+        "type": ObjectPropertyModel {
+          "property": StringModel {
+            "name": "type",
+            "options": Object {
+              "isNullable": false,
+            },
+            "originalInput": OpenapiV3Schema {
+              "type": "string",
+              "x-modelgen-inferred-name": "type",
+            },
+          },
+          "propertyName": "type",
+          "required": false,
+        },
+      },
+    },
+    "test_get_200_application_json": ObjectModel {
+      "name": "test_get_200_application_json",
+      "options": Object {
+        "isNullable": false,
+      },
+      "originalInput": OpenapiV3Schema {
+        "properties": OpenapiV3Schema {
+          "code": OpenapiV3Schema {
+            "format": "int32",
+            "type": "integer",
+            "x-modelgen-inferred-name": "code",
+          },
+          "message": OpenapiV3Schema {
+            "type": "string",
+            "x-modelgen-inferred-name": "message",
+          },
+          "type": OpenapiV3Schema {
+            "type": "string",
+            "x-modelgen-inferred-name": "type",
+          },
+        },
+        "type": "object",
+        "x-modelgen-inferred-name": "test_get_200_application_json",
+      },
+      "properties": Object {
+        "additionalProperties": ObjectPropertyModel {
+          "property": DictionaryModel {
+            "key": StringModel {
+              "name": "additionalProperties",
+              "options": Object {
+                "isNullable": false,
+              },
+              "originalInput": Array [
+                true,
+              ],
+            },
+            "name": "additionalProperties",
+            "options": Object {
+              "isNullable": false,
+            },
+            "originalInput": Array [
+              true,
+            ],
+            "serializationType": "unwrap",
+            "value": AnyModel {
+              "name": "undefined",
+              "options": Object {
+                "isNullable": true,
+              },
+              "originalInput": true,
+            },
+          },
+          "propertyName": "additionalProperties",
+          "required": false,
+        },
+        "code": ObjectPropertyModel {
+          "property": IntegerModel {
+            "name": "code",
+            "options": Object {
+              "format": "int32",
+              "isNullable": false,
+            },
+            "originalInput": OpenapiV3Schema {
+              "format": "int32",
+              "type": "integer",
+              "x-modelgen-inferred-name": "code",
+            },
+          },
+          "propertyName": "code",
+          "required": false,
+        },
+        "message": ObjectPropertyModel {
+          "property": StringModel {
+            "name": "message",
+            "options": Object {
+              "isNullable": false,
+            },
+            "originalInput": OpenapiV3Schema {
+              "type": "string",
+              "x-modelgen-inferred-name": "message",
+            },
+          },
+          "propertyName": "message",
+          "required": false,
+        },
+        "type": ObjectPropertyModel {
+          "property": StringModel {
+            "name": "type",
+            "options": Object {
+              "isNullable": false,
+            },
+            "originalInput": OpenapiV3Schema {
+              "type": "string",
+              "x-modelgen-inferred-name": "type",
+            },
+          },
+          "propertyName": "type",
+          "required": false,
+        },
+      },
+    },
+    "test_get_application_json": ObjectModel {
+      "name": "test_get_application_json",
+      "options": Object {
+        "isNullable": false,
+      },
+      "originalInput": OpenapiV3Schema {
+        "properties": OpenapiV3Schema {
+          "code": OpenapiV3Schema {
+            "format": "int32",
+            "type": "integer",
+            "x-modelgen-inferred-name": "code",
+          },
+          "message": OpenapiV3Schema {
+            "type": "string",
+            "x-modelgen-inferred-name": "message",
+          },
+          "type": OpenapiV3Schema {
+            "type": "string",
+            "x-modelgen-inferred-name": "type",
+          },
+        },
+        "type": "object",
+        "x-modelgen-inferred-name": "test_get_application_json",
+      },
+      "properties": Object {
+        "additionalProperties": ObjectPropertyModel {
+          "property": DictionaryModel {
+            "key": StringModel {
+              "name": "additionalProperties",
+              "options": Object {
+                "isNullable": false,
+              },
+              "originalInput": Array [
+                true,
+              ],
+            },
+            "name": "additionalProperties",
+            "options": Object {
+              "isNullable": false,
+            },
+            "originalInput": Array [
+              true,
+            ],
+            "serializationType": "unwrap",
+            "value": AnyModel {
+              "name": "undefined",
+              "options": Object {
+                "isNullable": true,
+              },
+              "originalInput": true,
+            },
+          },
+          "propertyName": "additionalProperties",
+          "required": false,
+        },
+        "code": ObjectPropertyModel {
+          "property": IntegerModel {
+            "name": "code",
+            "options": Object {
+              "format": "int32",
+              "isNullable": false,
+            },
+            "originalInput": OpenapiV3Schema {
+              "format": "int32",
+              "type": "integer",
+              "x-modelgen-inferred-name": "code",
+            },
+          },
+          "propertyName": "code",
+          "required": false,
+        },
+        "message": ObjectPropertyModel {
+          "property": StringModel {
+            "name": "message",
+            "options": Object {
+              "isNullable": false,
+            },
+            "originalInput": OpenapiV3Schema {
+              "type": "string",
+              "x-modelgen-inferred-name": "message",
+            },
+          },
+          "propertyName": "message",
+          "required": false,
+        },
+        "type": ObjectPropertyModel {
+          "property": StringModel {
+            "name": "type",
+            "options": Object {
+              "isNullable": false,
+            },
+            "originalInput": OpenapiV3Schema {
+              "type": "string",
+              "x-modelgen-inferred-name": "type",
+            },
+          },
+          "propertyName": "type",
+          "required": false,
+        },
+      },
+    },
+    "test_head_200_application_json": ObjectModel {
+      "name": "test_head_200_application_json",
+      "options": Object {
+        "isNullable": false,
+      },
+      "originalInput": OpenapiV3Schema {
+        "properties": OpenapiV3Schema {
+          "code": OpenapiV3Schema {
+            "format": "int32",
+            "type": "integer",
+            "x-modelgen-inferred-name": "code",
+          },
+          "message": OpenapiV3Schema {
+            "type": "string",
+            "x-modelgen-inferred-name": "message",
+          },
+          "type": OpenapiV3Schema {
+            "type": "string",
+            "x-modelgen-inferred-name": "type",
+          },
+        },
+        "type": "object",
+        "x-modelgen-inferred-name": "test_head_200_application_json",
+      },
+      "properties": Object {
+        "additionalProperties": ObjectPropertyModel {
+          "property": DictionaryModel {
+            "key": StringModel {
+              "name": "additionalProperties",
+              "options": Object {
+                "isNullable": false,
+              },
+              "originalInput": Array [
+                true,
+              ],
+            },
+            "name": "additionalProperties",
+            "options": Object {
+              "isNullable": false,
+            },
+            "originalInput": Array [
+              true,
+            ],
+            "serializationType": "unwrap",
+            "value": AnyModel {
+              "name": "undefined",
+              "options": Object {
+                "isNullable": true,
+              },
+              "originalInput": true,
+            },
+          },
+          "propertyName": "additionalProperties",
+          "required": false,
+        },
+        "code": ObjectPropertyModel {
+          "property": IntegerModel {
+            "name": "code",
+            "options": Object {
+              "format": "int32",
+              "isNullable": false,
+            },
+            "originalInput": OpenapiV3Schema {
+              "format": "int32",
+              "type": "integer",
+              "x-modelgen-inferred-name": "code",
+            },
+          },
+          "propertyName": "code",
+          "required": false,
+        },
+        "message": ObjectPropertyModel {
+          "property": StringModel {
+            "name": "message",
+            "options": Object {
+              "isNullable": false,
+            },
+            "originalInput": OpenapiV3Schema {
+              "type": "string",
+              "x-modelgen-inferred-name": "message",
+            },
+          },
+          "propertyName": "message",
+          "required": false,
+        },
+        "type": ObjectPropertyModel {
+          "property": StringModel {
+            "name": "type",
+            "options": Object {
+              "isNullable": false,
+            },
+            "originalInput": OpenapiV3Schema {
+              "type": "string",
+              "x-modelgen-inferred-name": "type",
+            },
+          },
+          "propertyName": "type",
+          "required": false,
+        },
+      },
+    },
+    "test_options_200_application_json": ObjectModel {
+      "name": "test_options_200_application_json",
+      "options": Object {
+        "isNullable": false,
+      },
+      "originalInput": OpenapiV3Schema {
+        "properties": OpenapiV3Schema {
+          "code": OpenapiV3Schema {
+            "format": "int32",
+            "type": "integer",
+            "x-modelgen-inferred-name": "code",
+          },
+          "message": OpenapiV3Schema {
+            "type": "string",
+            "x-modelgen-inferred-name": "message",
+          },
+          "type": OpenapiV3Schema {
+            "type": "string",
+            "x-modelgen-inferred-name": "type",
+          },
+        },
+        "type": "object",
+        "x-modelgen-inferred-name": "test_options_200_application_json",
+      },
+      "properties": Object {
+        "additionalProperties": ObjectPropertyModel {
+          "property": DictionaryModel {
+            "key": StringModel {
+              "name": "additionalProperties",
+              "options": Object {
+                "isNullable": false,
+              },
+              "originalInput": Array [
+                true,
+              ],
+            },
+            "name": "additionalProperties",
+            "options": Object {
+              "isNullable": false,
+            },
+            "originalInput": Array [
+              true,
+            ],
+            "serializationType": "unwrap",
+            "value": AnyModel {
+              "name": "undefined",
+              "options": Object {
+                "isNullable": true,
+              },
+              "originalInput": true,
+            },
+          },
+          "propertyName": "additionalProperties",
+          "required": false,
+        },
+        "code": ObjectPropertyModel {
+          "property": IntegerModel {
+            "name": "code",
+            "options": Object {
+              "format": "int32",
+              "isNullable": false,
+            },
+            "originalInput": OpenapiV3Schema {
+              "format": "int32",
+              "type": "integer",
+              "x-modelgen-inferred-name": "code",
+            },
+          },
+          "propertyName": "code",
+          "required": false,
+        },
+        "message": ObjectPropertyModel {
+          "property": StringModel {
+            "name": "message",
+            "options": Object {
+              "isNullable": false,
+            },
+            "originalInput": OpenapiV3Schema {
+              "type": "string",
+              "x-modelgen-inferred-name": "message",
+            },
+          },
+          "propertyName": "message",
+          "required": false,
+        },
+        "type": ObjectPropertyModel {
+          "property": StringModel {
+            "name": "type",
+            "options": Object {
+              "isNullable": false,
+            },
+            "originalInput": OpenapiV3Schema {
+              "type": "string",
+              "x-modelgen-inferred-name": "type",
+            },
+          },
+          "propertyName": "type",
+          "required": false,
+        },
+      },
+    },
+    "test_options_application_json": ObjectModel {
+      "name": "test_options_application_json",
+      "options": Object {
+        "isNullable": false,
+      },
+      "originalInput": OpenapiV3Schema {
+        "properties": OpenapiV3Schema {
+          "code": OpenapiV3Schema {
+            "format": "int32",
+            "type": "integer",
+            "x-modelgen-inferred-name": "code",
+          },
+          "message": OpenapiV3Schema {
+            "type": "string",
+            "x-modelgen-inferred-name": "message",
+          },
+          "type": OpenapiV3Schema {
+            "type": "string",
+            "x-modelgen-inferred-name": "type",
+          },
+        },
+        "type": "object",
+        "x-modelgen-inferred-name": "test_options_application_json",
+      },
+      "properties": Object {
+        "additionalProperties": ObjectPropertyModel {
+          "property": DictionaryModel {
+            "key": StringModel {
+              "name": "additionalProperties",
+              "options": Object {
+                "isNullable": false,
+              },
+              "originalInput": Array [
+                true,
+              ],
+            },
+            "name": "additionalProperties",
+            "options": Object {
+              "isNullable": false,
+            },
+            "originalInput": Array [
+              true,
+            ],
+            "serializationType": "unwrap",
+            "value": AnyModel {
+              "name": "undefined",
+              "options": Object {
+                "isNullable": true,
+              },
+              "originalInput": true,
+            },
+          },
+          "propertyName": "additionalProperties",
+          "required": false,
+        },
+        "code": ObjectPropertyModel {
+          "property": IntegerModel {
+            "name": "code",
+            "options": Object {
+              "format": "int32",
+              "isNullable": false,
+            },
+            "originalInput": OpenapiV3Schema {
+              "format": "int32",
+              "type": "integer",
+              "x-modelgen-inferred-name": "code",
+            },
+          },
+          "propertyName": "code",
+          "required": false,
+        },
+        "message": ObjectPropertyModel {
+          "property": StringModel {
+            "name": "message",
+            "options": Object {
+              "isNullable": false,
+            },
+            "originalInput": OpenapiV3Schema {
+              "type": "string",
+              "x-modelgen-inferred-name": "message",
+            },
+          },
+          "propertyName": "message",
+          "required": false,
+        },
+        "type": ObjectPropertyModel {
+          "property": StringModel {
+            "name": "type",
+            "options": Object {
+              "isNullable": false,
+            },
+            "originalInput": OpenapiV3Schema {
+              "type": "string",
+              "x-modelgen-inferred-name": "type",
+            },
+          },
+          "propertyName": "type",
+          "required": false,
+        },
+      },
+    },
+    "test_parameters_header_Authorization": StringModel {
+      "name": "test_parameters_header_Authorization",
+      "options": Object {
+        "isNullable": false,
+      },
+      "originalInput": OpenapiV3Schema {
+        "type": "string",
+        "x-modelgen-inferred-name": "test_parameters_header_Authorization",
+      },
+    },
+    "test_patch_200_application_json": ObjectModel {
+      "name": "test_patch_200_application_json",
+      "options": Object {
+        "isNullable": false,
+      },
+      "originalInput": OpenapiV3Schema {
+        "properties": OpenapiV3Schema {
+          "code": OpenapiV3Schema {
+            "format": "int32",
+            "type": "integer",
+            "x-modelgen-inferred-name": "code",
+          },
+          "message": OpenapiV3Schema {
+            "type": "string",
+            "x-modelgen-inferred-name": "message",
+          },
+          "type": OpenapiV3Schema {
+            "type": "string",
+            "x-modelgen-inferred-name": "type",
+          },
+        },
+        "type": "object",
+        "x-modelgen-inferred-name": "test_patch_200_application_json",
+      },
+      "properties": Object {
+        "additionalProperties": ObjectPropertyModel {
+          "property": DictionaryModel {
+            "key": StringModel {
+              "name": "additionalProperties",
+              "options": Object {
+                "isNullable": false,
+              },
+              "originalInput": Array [
+                true,
+              ],
+            },
+            "name": "additionalProperties",
+            "options": Object {
+              "isNullable": false,
+            },
+            "originalInput": Array [
+              true,
+            ],
+            "serializationType": "unwrap",
+            "value": AnyModel {
+              "name": "undefined",
+              "options": Object {
+                "isNullable": true,
+              },
+              "originalInput": true,
+            },
+          },
+          "propertyName": "additionalProperties",
+          "required": false,
+        },
+        "code": ObjectPropertyModel {
+          "property": IntegerModel {
+            "name": "code",
+            "options": Object {
+              "format": "int32",
+              "isNullable": false,
+            },
+            "originalInput": OpenapiV3Schema {
+              "format": "int32",
+              "type": "integer",
+              "x-modelgen-inferred-name": "code",
+            },
+          },
+          "propertyName": "code",
+          "required": false,
+        },
+        "message": ObjectPropertyModel {
+          "property": StringModel {
+            "name": "message",
+            "options": Object {
+              "isNullable": false,
+            },
+            "originalInput": OpenapiV3Schema {
+              "type": "string",
+              "x-modelgen-inferred-name": "message",
+            },
+          },
+          "propertyName": "message",
+          "required": false,
+        },
+        "type": ObjectPropertyModel {
+          "property": StringModel {
+            "name": "type",
+            "options": Object {
+              "isNullable": false,
+            },
+            "originalInput": OpenapiV3Schema {
+              "type": "string",
+              "x-modelgen-inferred-name": "type",
+            },
+          },
+          "propertyName": "type",
+          "required": false,
+        },
+      },
+    },
+    "test_patch_application_json": ObjectModel {
+      "name": "test_patch_application_json",
+      "options": Object {
+        "isNullable": false,
+      },
+      "originalInput": OpenapiV3Schema {
+        "properties": OpenapiV3Schema {
+          "code": OpenapiV3Schema {
+            "format": "int32",
+            "type": "integer",
+            "x-modelgen-inferred-name": "code",
+          },
+          "message": OpenapiV3Schema {
+            "type": "string",
+            "x-modelgen-inferred-name": "message",
+          },
+          "type": OpenapiV3Schema {
+            "type": "string",
+            "x-modelgen-inferred-name": "type",
+          },
+        },
+        "type": "object",
+        "x-modelgen-inferred-name": "test_patch_application_json",
+      },
+      "properties": Object {
+        "additionalProperties": ObjectPropertyModel {
+          "property": DictionaryModel {
+            "key": StringModel {
+              "name": "additionalProperties",
+              "options": Object {
+                "isNullable": false,
+              },
+              "originalInput": Array [
+                true,
+              ],
+            },
+            "name": "additionalProperties",
+            "options": Object {
+              "isNullable": false,
+            },
+            "originalInput": Array [
+              true,
+            ],
+            "serializationType": "unwrap",
+            "value": AnyModel {
+              "name": "undefined",
+              "options": Object {
+                "isNullable": true,
+              },
+              "originalInput": true,
+            },
+          },
+          "propertyName": "additionalProperties",
+          "required": false,
+        },
+        "code": ObjectPropertyModel {
+          "property": IntegerModel {
+            "name": "code",
+            "options": Object {
+              "format": "int32",
+              "isNullable": false,
+            },
+            "originalInput": OpenapiV3Schema {
+              "format": "int32",
+              "type": "integer",
+              "x-modelgen-inferred-name": "code",
+            },
+          },
+          "propertyName": "code",
+          "required": false,
+        },
+        "message": ObjectPropertyModel {
+          "property": StringModel {
+            "name": "message",
+            "options": Object {
+              "isNullable": false,
+            },
+            "originalInput": OpenapiV3Schema {
+              "type": "string",
+              "x-modelgen-inferred-name": "message",
+            },
+          },
+          "propertyName": "message",
+          "required": false,
+        },
+        "type": ObjectPropertyModel {
+          "property": StringModel {
+            "name": "type",
+            "options": Object {
+              "isNullable": false,
+            },
+            "originalInput": OpenapiV3Schema {
+              "type": "string",
+              "x-modelgen-inferred-name": "type",
+            },
+          },
+          "propertyName": "type",
+          "required": false,
+        },
+      },
+    },
+    "test_post_200_application_json": ObjectModel {
+      "name": "test_post_200_application_json",
+      "options": Object {
+        "isNullable": false,
+      },
+      "originalInput": OpenapiV3Schema {
+        "properties": OpenapiV3Schema {
+          "code": OpenapiV3Schema {
+            "format": "int32",
+            "type": "integer",
+            "x-modelgen-inferred-name": "code",
+          },
+          "message": OpenapiV3Schema {
+            "type": "string",
+            "x-modelgen-inferred-name": "message",
+          },
+          "type": OpenapiV3Schema {
+            "type": "string",
+            "x-modelgen-inferred-name": "type",
+          },
+        },
+        "type": "object",
+        "x-modelgen-inferred-name": "test_post_200_application_json",
+      },
+      "properties": Object {
+        "additionalProperties": ObjectPropertyModel {
+          "property": DictionaryModel {
+            "key": StringModel {
+              "name": "additionalProperties",
+              "options": Object {
+                "isNullable": false,
+              },
+              "originalInput": Array [
+                true,
+              ],
+            },
+            "name": "additionalProperties",
+            "options": Object {
+              "isNullable": false,
+            },
+            "originalInput": Array [
+              true,
+            ],
+            "serializationType": "unwrap",
+            "value": AnyModel {
+              "name": "undefined",
+              "options": Object {
+                "isNullable": true,
+              },
+              "originalInput": true,
+            },
+          },
+          "propertyName": "additionalProperties",
+          "required": false,
+        },
+        "code": ObjectPropertyModel {
+          "property": IntegerModel {
+            "name": "code",
+            "options": Object {
+              "format": "int32",
+              "isNullable": false,
+            },
+            "originalInput": OpenapiV3Schema {
+              "format": "int32",
+              "type": "integer",
+              "x-modelgen-inferred-name": "code",
+            },
+          },
+          "propertyName": "code",
+          "required": false,
+        },
+        "message": ObjectPropertyModel {
+          "property": StringModel {
+            "name": "message",
+            "options": Object {
+              "isNullable": false,
+            },
+            "originalInput": OpenapiV3Schema {
+              "type": "string",
+              "x-modelgen-inferred-name": "message",
+            },
+          },
+          "propertyName": "message",
+          "required": false,
+        },
+        "type": ObjectPropertyModel {
+          "property": StringModel {
+            "name": "type",
+            "options": Object {
+              "isNullable": false,
+            },
+            "originalInput": OpenapiV3Schema {
+              "type": "string",
+              "x-modelgen-inferred-name": "type",
+            },
+          },
+          "propertyName": "type",
+          "required": false,
+        },
+      },
+    },
+    "test_post_application_json": ObjectModel {
+      "name": "test_post_application_json",
+      "options": Object {
+        "isNullable": false,
+      },
+      "originalInput": OpenapiV3Schema {
+        "properties": OpenapiV3Schema {
+          "code": OpenapiV3Schema {
+            "format": "int32",
+            "type": "integer",
+            "x-modelgen-inferred-name": "code",
+          },
+          "message": OpenapiV3Schema {
+            "type": "string",
+            "x-modelgen-inferred-name": "message",
+          },
+          "type": OpenapiV3Schema {
+            "type": "string",
+            "x-modelgen-inferred-name": "type",
+          },
+        },
+        "type": "object",
+        "x-modelgen-inferred-name": "test_post_application_json",
+      },
+      "properties": Object {
+        "additionalProperties": ObjectPropertyModel {
+          "property": DictionaryModel {
+            "key": StringModel {
+              "name": "additionalProperties",
+              "options": Object {
+                "isNullable": false,
+              },
+              "originalInput": Array [
+                true,
+              ],
+            },
+            "name": "additionalProperties",
+            "options": Object {
+              "isNullable": false,
+            },
+            "originalInput": Array [
+              true,
+            ],
+            "serializationType": "unwrap",
+            "value": AnyModel {
+              "name": "undefined",
+              "options": Object {
+                "isNullable": true,
+              },
+              "originalInput": true,
+            },
+          },
+          "propertyName": "additionalProperties",
+          "required": false,
+        },
+        "code": ObjectPropertyModel {
+          "property": IntegerModel {
+            "name": "code",
+            "options": Object {
+              "format": "int32",
+              "isNullable": false,
+            },
+            "originalInput": OpenapiV3Schema {
+              "format": "int32",
+              "type": "integer",
+              "x-modelgen-inferred-name": "code",
+            },
+          },
+          "propertyName": "code",
+          "required": false,
+        },
+        "message": ObjectPropertyModel {
+          "property": StringModel {
+            "name": "message",
+            "options": Object {
+              "isNullable": false,
+            },
+            "originalInput": OpenapiV3Schema {
+              "type": "string",
+              "x-modelgen-inferred-name": "message",
+            },
+          },
+          "propertyName": "message",
+          "required": false,
+        },
+        "type": ObjectPropertyModel {
+          "property": StringModel {
+            "name": "type",
+            "options": Object {
+              "isNullable": false,
+            },
+            "originalInput": OpenapiV3Schema {
+              "type": "string",
+              "x-modelgen-inferred-name": "type",
+            },
+          },
+          "propertyName": "type",
+          "required": false,
+        },
+      },
+    },
+    "test_post_callback_onData_requestquerycallbackUrldata_post_202_application_json": ObjectModel {
+      "name": "test_post_callback_onData_requestquerycallbackUrldata_post_202_application_json",
+      "options": Object {
+        "isNullable": false,
+      },
+      "originalInput": OpenapiV3Schema {
+        "properties": OpenapiV3Schema {
+          "code": OpenapiV3Schema {
+            "format": "int32",
+            "type": "integer",
+            "x-modelgen-inferred-name": "code",
+          },
+          "message": OpenapiV3Schema {
+            "type": "string",
+            "x-modelgen-inferred-name": "message",
+          },
+          "type": OpenapiV3Schema {
+            "type": "string",
+            "x-modelgen-inferred-name": "type",
+          },
+        },
+        "type": "object",
+        "x-modelgen-inferred-name": "test_post_callback_onData_requestquerycallbackUrldata_post_202_application_json",
+      },
+      "properties": Object {
+        "additionalProperties": ObjectPropertyModel {
+          "property": DictionaryModel {
+            "key": StringModel {
+              "name": "additionalProperties",
+              "options": Object {
+                "isNullable": false,
+              },
+              "originalInput": Array [
+                true,
+              ],
+            },
+            "name": "additionalProperties",
+            "options": Object {
+              "isNullable": false,
+            },
+            "originalInput": Array [
+              true,
+            ],
+            "serializationType": "unwrap",
+            "value": AnyModel {
+              "name": "undefined",
+              "options": Object {
+                "isNullable": true,
+              },
+              "originalInput": true,
+            },
+          },
+          "propertyName": "additionalProperties",
+          "required": false,
+        },
+        "code": ObjectPropertyModel {
+          "property": IntegerModel {
+            "name": "code",
+            "options": Object {
+              "format": "int32",
+              "isNullable": false,
+            },
+            "originalInput": OpenapiV3Schema {
+              "format": "int32",
+              "type": "integer",
+              "x-modelgen-inferred-name": "code",
+            },
+          },
+          "propertyName": "code",
+          "required": false,
+        },
+        "message": ObjectPropertyModel {
+          "property": StringModel {
+            "name": "message",
+            "options": Object {
+              "isNullable": false,
+            },
+            "originalInput": OpenapiV3Schema {
+              "type": "string",
+              "x-modelgen-inferred-name": "message",
+            },
+          },
+          "propertyName": "message",
+          "required": false,
+        },
+        "type": ObjectPropertyModel {
+          "property": StringModel {
+            "name": "type",
+            "options": Object {
+              "isNullable": false,
+            },
+            "originalInput": OpenapiV3Schema {
+              "type": "string",
+              "x-modelgen-inferred-name": "type",
+            },
+          },
+          "propertyName": "type",
+          "required": false,
+        },
+      },
+    },
+    "test_post_callback_onData_requestquerycallbackUrldata_post_application_json": ObjectModel {
+      "name": "test_post_callback_onData_requestquerycallbackUrldata_post_application_json",
+      "options": Object {
+        "isNullable": false,
+      },
+      "originalInput": OpenapiV3Schema {
+        "properties": OpenapiV3Schema {
+          "code": OpenapiV3Schema {
+            "format": "int32",
+            "type": "integer",
+            "x-modelgen-inferred-name": "code",
+          },
+          "message": OpenapiV3Schema {
+            "type": "string",
+            "x-modelgen-inferred-name": "message",
+          },
+          "type": OpenapiV3Schema {
+            "type": "string",
+            "x-modelgen-inferred-name": "type",
+          },
+        },
+        "type": "object",
+        "x-modelgen-inferred-name": "test_post_callback_onData_requestquerycallbackUrldata_post_application_json",
+      },
+      "properties": Object {
+        "additionalProperties": ObjectPropertyModel {
+          "property": DictionaryModel {
+            "key": StringModel {
+              "name": "additionalProperties",
+              "options": Object {
+                "isNullable": false,
+              },
+              "originalInput": Array [
+                true,
+              ],
+            },
+            "name": "additionalProperties",
+            "options": Object {
+              "isNullable": false,
+            },
+            "originalInput": Array [
+              true,
+            ],
+            "serializationType": "unwrap",
+            "value": AnyModel {
+              "name": "undefined",
+              "options": Object {
+                "isNullable": true,
+              },
+              "originalInput": true,
+            },
+          },
+          "propertyName": "additionalProperties",
+          "required": false,
+        },
+        "code": ObjectPropertyModel {
+          "property": IntegerModel {
+            "name": "code",
+            "options": Object {
+              "format": "int32",
+              "isNullable": false,
+            },
+            "originalInput": OpenapiV3Schema {
+              "format": "int32",
+              "type": "integer",
+              "x-modelgen-inferred-name": "code",
+            },
+          },
+          "propertyName": "code",
+          "required": false,
+        },
+        "message": ObjectPropertyModel {
+          "property": StringModel {
+            "name": "message",
+            "options": Object {
+              "isNullable": false,
+            },
+            "originalInput": OpenapiV3Schema {
+              "type": "string",
+              "x-modelgen-inferred-name": "message",
+            },
+          },
+          "propertyName": "message",
+          "required": false,
+        },
+        "type": ObjectPropertyModel {
+          "property": StringModel {
+            "name": "type",
+            "options": Object {
+              "isNullable": false,
+            },
+            "originalInput": OpenapiV3Schema {
+              "type": "string",
+              "x-modelgen-inferred-name": "type",
+            },
+          },
+          "propertyName": "type",
+          "required": false,
+        },
+      },
+    },
+    "test_post_parameters_query_callbackUrl": StringModel {
+      "name": "test_post_parameters_query_callbackUrl",
+      "options": Object {
+        "format": "uri",
+        "isNullable": false,
+      },
+      "originalInput": OpenapiV3Schema {
+        "format": "uri",
+        "type": "string",
+        "x-modelgen-inferred-name": "test_post_parameters_query_callbackUrl",
+      },
+    },
+    "test_put_200_application_json": ObjectModel {
+      "name": "test_put_200_application_json",
+      "options": Object {
+        "isNullable": false,
+      },
+      "originalInput": OpenapiV3Schema {
+        "properties": OpenapiV3Schema {
+          "code": OpenapiV3Schema {
+            "format": "int32",
+            "type": "integer",
+            "x-modelgen-inferred-name": "code",
+          },
+          "message": OpenapiV3Schema {
+            "type": "string",
+            "x-modelgen-inferred-name": "message",
+          },
+          "type": OpenapiV3Schema {
+            "type": "string",
+            "x-modelgen-inferred-name": "type",
+          },
+        },
+        "type": "object",
+        "x-modelgen-inferred-name": "test_put_200_application_json",
+      },
+      "properties": Object {
+        "additionalProperties": ObjectPropertyModel {
+          "property": DictionaryModel {
+            "key": StringModel {
+              "name": "additionalProperties",
+              "options": Object {
+                "isNullable": false,
+              },
+              "originalInput": Array [
+                true,
+              ],
+            },
+            "name": "additionalProperties",
+            "options": Object {
+              "isNullable": false,
+            },
+            "originalInput": Array [
+              true,
+            ],
+            "serializationType": "unwrap",
+            "value": AnyModel {
+              "name": "undefined",
+              "options": Object {
+                "isNullable": true,
+              },
+              "originalInput": true,
+            },
+          },
+          "propertyName": "additionalProperties",
+          "required": false,
+        },
+        "code": ObjectPropertyModel {
+          "property": IntegerModel {
+            "name": "code",
+            "options": Object {
+              "format": "int32",
+              "isNullable": false,
+            },
+            "originalInput": OpenapiV3Schema {
+              "format": "int32",
+              "type": "integer",
+              "x-modelgen-inferred-name": "code",
+            },
+          },
+          "propertyName": "code",
+          "required": false,
+        },
+        "message": ObjectPropertyModel {
+          "property": StringModel {
+            "name": "message",
+            "options": Object {
+              "isNullable": false,
+            },
+            "originalInput": OpenapiV3Schema {
+              "type": "string",
+              "x-modelgen-inferred-name": "message",
+            },
+          },
+          "propertyName": "message",
+          "required": false,
+        },
+        "type": ObjectPropertyModel {
+          "property": StringModel {
+            "name": "type",
+            "options": Object {
+              "isNullable": false,
+            },
+            "originalInput": OpenapiV3Schema {
+              "type": "string",
+              "x-modelgen-inferred-name": "type",
+            },
+          },
+          "propertyName": "type",
+          "required": false,
+        },
+      },
+    },
+    "test_put_application_json": ObjectModel {
+      "name": "test_put_application_json",
+      "options": Object {
+        "isNullable": false,
+      },
+      "originalInput": OpenapiV3Schema {
+        "properties": OpenapiV3Schema {
+          "code": OpenapiV3Schema {
+            "format": "int32",
+            "type": "integer",
+            "x-modelgen-inferred-name": "code",
+          },
+          "message": OpenapiV3Schema {
+            "type": "string",
+            "x-modelgen-inferred-name": "message",
+          },
+          "type": OpenapiV3Schema {
+            "type": "string",
+            "x-modelgen-inferred-name": "type",
+          },
+        },
+        "type": "object",
+        "x-modelgen-inferred-name": "test_put_application_json",
+      },
+      "properties": Object {
+        "additionalProperties": ObjectPropertyModel {
+          "property": DictionaryModel {
+            "key": StringModel {
+              "name": "additionalProperties",
+              "options": Object {
+                "isNullable": false,
+              },
+              "originalInput": Array [
+                true,
+              ],
+            },
+            "name": "additionalProperties",
+            "options": Object {
+              "isNullable": false,
+            },
+            "originalInput": Array [
+              true,
+            ],
+            "serializationType": "unwrap",
+            "value": AnyModel {
+              "name": "undefined",
+              "options": Object {
+                "isNullable": true,
+              },
+              "originalInput": true,
+            },
+          },
+          "propertyName": "additionalProperties",
+          "required": false,
+        },
+        "code": ObjectPropertyModel {
+          "property": IntegerModel {
+            "name": "code",
+            "options": Object {
+              "format": "int32",
+              "isNullable": false,
+            },
+            "originalInput": OpenapiV3Schema {
+              "format": "int32",
+              "type": "integer",
+              "x-modelgen-inferred-name": "code",
+            },
+          },
+          "propertyName": "code",
+          "required": false,
+        },
+        "message": ObjectPropertyModel {
+          "property": StringModel {
+            "name": "message",
+            "options": Object {
+              "isNullable": false,
+            },
+            "originalInput": OpenapiV3Schema {
+              "type": "string",
+              "x-modelgen-inferred-name": "message",
+            },
+          },
+          "propertyName": "message",
+          "required": false,
+        },
+        "type": ObjectPropertyModel {
+          "property": StringModel {
+            "name": "type",
+            "options": Object {
+              "isNullable": false,
+            },
+            "originalInput": OpenapiV3Schema {
+              "type": "string",
+              "x-modelgen-inferred-name": "type",
+            },
+          },
+          "propertyName": "type",
+          "required": false,
+        },
+      },
+    },
+    "test_trace_200_application_json": ObjectModel {
+      "name": "test_trace_200_application_json",
+      "options": Object {
+        "isNullable": false,
+      },
+      "originalInput": OpenapiV3Schema {
+        "properties": OpenapiV3Schema {
+          "code": OpenapiV3Schema {
+            "format": "int32",
+            "type": "integer",
+            "x-modelgen-inferred-name": "code",
+          },
+          "message": OpenapiV3Schema {
+            "type": "string",
+            "x-modelgen-inferred-name": "message",
+          },
+          "type": OpenapiV3Schema {
+            "type": "string",
+            "x-modelgen-inferred-name": "type",
+          },
+        },
+        "type": "object",
+        "x-modelgen-inferred-name": "test_trace_200_application_json",
+      },
+      "properties": Object {
+        "additionalProperties": ObjectPropertyModel {
+          "property": DictionaryModel {
+            "key": StringModel {
+              "name": "additionalProperties",
+              "options": Object {
+                "isNullable": false,
+              },
+              "originalInput": Array [
+                true,
+              ],
+            },
+            "name": "additionalProperties",
+            "options": Object {
+              "isNullable": false,
+            },
+            "originalInput": Array [
+              true,
+            ],
+            "serializationType": "unwrap",
+            "value": AnyModel {
+              "name": "undefined",
+              "options": Object {
+                "isNullable": true,
+              },
+              "originalInput": true,
+            },
+          },
+          "propertyName": "additionalProperties",
+          "required": false,
+        },
+        "code": ObjectPropertyModel {
+          "property": IntegerModel {
+            "name": "code",
+            "options": Object {
+              "format": "int32",
+              "isNullable": false,
+            },
+            "originalInput": OpenapiV3Schema {
+              "format": "int32",
+              "type": "integer",
+              "x-modelgen-inferred-name": "code",
+            },
+          },
+          "propertyName": "code",
+          "required": false,
+        },
+        "message": ObjectPropertyModel {
+          "property": StringModel {
+            "name": "message",
+            "options": Object {
+              "isNullable": false,
+            },
+            "originalInput": OpenapiV3Schema {
+              "type": "string",
+              "x-modelgen-inferred-name": "message",
+            },
+          },
+          "propertyName": "message",
+          "required": false,
+        },
+        "type": ObjectPropertyModel {
+          "property": StringModel {
+            "name": "type",
+            "options": Object {
+              "isNullable": false,
+            },
+            "originalInput": OpenapiV3Schema {
+              "type": "string",
+              "x-modelgen-inferred-name": "type",
+            },
+          },
+          "propertyName": "type",
+          "required": false,
+        },
+      },
+    },
+    "test_trace_application_json": ObjectModel {
+      "name": "test_trace_application_json",
+      "options": Object {
+        "isNullable": false,
+      },
+      "originalInput": OpenapiV3Schema {
+        "properties": OpenapiV3Schema {
+          "code": OpenapiV3Schema {
+            "format": "int32",
+            "type": "integer",
+            "x-modelgen-inferred-name": "code",
+          },
+          "message": OpenapiV3Schema {
+            "type": "string",
+            "x-modelgen-inferred-name": "message",
+          },
+          "type": OpenapiV3Schema {
+            "type": "string",
+            "x-modelgen-inferred-name": "type",
+          },
+        },
+        "type": "object",
+        "x-modelgen-inferred-name": "test_trace_application_json",
+      },
+      "properties": Object {
+        "additionalProperties": ObjectPropertyModel {
+          "property": DictionaryModel {
+            "key": StringModel {
+              "name": "additionalProperties",
+              "options": Object {
+                "isNullable": false,
+              },
+              "originalInput": Array [
+                true,
+              ],
+            },
+            "name": "additionalProperties",
+            "options": Object {
+              "isNullable": false,
+            },
+            "originalInput": Array [
+              true,
+            ],
+            "serializationType": "unwrap",
+            "value": AnyModel {
+              "name": "undefined",
+              "options": Object {
+                "isNullable": true,
+              },
+              "originalInput": true,
+            },
+          },
+          "propertyName": "additionalProperties",
+          "required": false,
+        },
+        "code": ObjectPropertyModel {
+          "property": IntegerModel {
+            "name": "code",
+            "options": Object {
+              "format": "int32",
+              "isNullable": false,
+            },
+            "originalInput": OpenapiV3Schema {
+              "format": "int32",
+              "type": "integer",
+              "x-modelgen-inferred-name": "code",
+            },
+          },
+          "propertyName": "code",
+          "required": false,
+        },
+        "message": ObjectPropertyModel {
+          "property": StringModel {
+            "name": "message",
+            "options": Object {
+              "isNullable": false,
+            },
+            "originalInput": OpenapiV3Schema {
+              "type": "string",
+              "x-modelgen-inferred-name": "message",
+            },
+          },
+          "propertyName": "message",
+          "required": false,
+        },
+        "type": ObjectPropertyModel {
+          "property": StringModel {
+            "name": "type",
+            "options": Object {
+              "isNullable": false,
+            },
+            "originalInput": OpenapiV3Schema {
+              "type": "string",
+              "x-modelgen-inferred-name": "type",
+            },
+          },
+          "propertyName": "type",
+          "required": false,
+        },
+      },
+    },
+  },
   "originalInput": Object {
     "components": Object {
       "ApiResponse": Object {

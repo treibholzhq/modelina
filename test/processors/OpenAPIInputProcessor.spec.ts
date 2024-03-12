@@ -1,10 +1,15 @@
 import * as fs from 'fs';
 import * as path from 'path';
-import { AnyModel, CommonModel } from '../../src/models';
 import { OpenAPIInputProcessor } from '../../src/processors/OpenAPIInputProcessor';
 const basicDoc = JSON.parse(
   fs.readFileSync(
     path.resolve(__dirname, './OpenAPIInputProcessor/basic.json'),
+    'utf8'
+  )
+);
+const schemasOnlyDoc = JSON.parse(
+  fs.readFileSync(
+    path.resolve(__dirname, './OpenAPIInputProcessor/schemas_only.json'),
     'utf8'
   )
 );
@@ -13,26 +18,6 @@ const processorSpy = jest.spyOn(
   OpenAPIInputProcessor,
   'convertToInternalSchema'
 );
-const mockedReturnModels = [new CommonModel()];
-const mockedMetaModel = new AnyModel('', undefined);
-jest.mock('../../src/helpers/CommonModelToMetaModel', () => {
-  return {
-    convertToMetaModel: jest.fn().mockImplementation(() => {
-      return mockedMetaModel;
-    })
-  };
-});
-jest.mock('../../src/interpreter/Interpreter', () => {
-  return {
-    Interpreter: jest.fn().mockImplementation(() => {
-      return {
-        interpret: jest.fn().mockImplementation(() => {
-          return mockedReturnModels[0];
-        })
-      };
-    })
-  };
-});
 describe('OpenAPIInputProcessor', () => {
   afterAll(() => {
     jest.restoreAllMocks();
@@ -122,17 +107,30 @@ describe('OpenAPIInputProcessor', () => {
           }
         }
       };
-
       const processor = new OpenAPIInputProcessor();
-      await processor.process(doc);
-      expect(processorSpy.mock.calls).toContainEqual([
-        { type: 'string' },
+      const model = await processor.process(doc);
+      expect(Object.keys(model.models)).toContain(
         'test_get_parameters_query_operation_parameter'
-      ]);
-      expect(processorSpy.mock.calls).toContainEqual([
-        { type: 'string' },
+      );
+      expect(Object.keys(model.models)).toContain(
         'test_parameters_header_path_parameter'
-      ]);
+      );
+    });
+    test('should include schemas when paths are empty and alwaysIncludeComponents is true', async () => {
+      const processor = new OpenAPIInputProcessor();
+      const model = await processor.process(schemasOnlyDoc, {
+        openapi: { alwaysIncludeComponents: true }
+      });
+      expect(Object.keys(model.models)).toContain('User');
+      expect(Object.keys(model.models)).toContain('UserRole');
+      expect(Object.keys(model.models)).toContain('Address');
+    });
+    test('should not include schemas when paths are empty and alwaysIncludeComponents is false', async () => {
+      const processor = new OpenAPIInputProcessor();
+      const model = await processor.process(schemasOnlyDoc, {
+        openapi: { alwaysIncludeComponents: false }
+      });
+      expect(Object.keys(model.models)).toHaveLength(0);
     });
   });
 });
